@@ -1,26 +1,53 @@
-var a = 10;
-var b = a; /* paso por valor las variables primitivas siempre se pasan por valor */
-
-console.log(a);
-console.log(b);
-
-a = 20;
-
-console.log(a);
-console.log(b);
-
-
-/* cuando son objetos se pasan por referencia, por eso cambiando uno, se modifica en todos*/
-var c = {
-    nombre :"Juana"
+var persona = {
+    nombre: "Juana",
+    apellido: "Herrera",
+    edad: 25,
+    direccion: {
+        calle: "Juárez",
+        numero: 200,
+        estado: "Nayarit",
+        edificio:{
+            nombre: "Edificio principal",
+            telefono: "3111115 22"
+        }
+    }
 };
 
-var d = c;
+console.log(persona.nombre);
+console.log(persona.edad);
+console.log(persona.direccion);
+console.log(persona.direccion.estado);
 
-console.log(c);
-console.log(d);
 
-c.nombre = "Maria"
+/* lo crea al vuelo  y lo modifica sin problemas */ 
+persona.direccion.municipio = "Tepic";
 
-console.log(c);
-console.log(d);
+console.log(persona.direccion)
+
+
+console.log(persona.direccion.edificio.telefono)
+
+var edificio_persona = persona.direccion.edificio
+
+console.log(edificio_persona.telefono)
+
+edificio_persona.nombre_gerente = "Martin Caballero"
+edificio_persona.nopiso = "8vo piso"
+
+console.log(edificio_persona)
+
+persona.direccion.edificio.encargado = "Patricia"
+persona.direccion.edificio.noperi = "9no piso"
+
+console.log(edificio_persona)
+
+
+
+
+
+/* notación corchete es bueno para cuando tenemos datos dinámicos */
+
+var campo = "edad";
+console.log(persona["nombre"]);
+console.log(persona["direccion"]["calle"]);
+console.log(persona[campo])
