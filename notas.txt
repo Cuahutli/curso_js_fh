@@ -20,3 +20,6 @@
 
 --> En javascript las funciones y los procedimientos es lo mismo, sólo existe la función
 --> Todas las funciones regresan un valor, si no hacer return el return es undefined
+--> una buena práctica es poner todas las funciones al principio del archivo
+
+--> Las funciones así como los objetos y los tipos primitivos pueden ser anónimas
