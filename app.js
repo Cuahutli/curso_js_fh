@@ -1,62 +1,62 @@
-// los parametros pueden ser objetos, variables primitivas u otras funciones
-//function imprimir(nombre, apellido) {
-//    console.log(nombre +  " " + apellido)
-//}
+// una función puede regresar primitivos, objetos, undefined, función, null
 
-//variable nombrada
-//var nom = "juan"
-
-// "Juan" se convierte en una variable anónima
-//imprimir("Juan") // Juan undefined  function imprimir (nombre, apellido)
-// imprimir("Juan", "Padilla")
-
-/*
-function imprimir(nombre, apellido) {
-    // if (apellido === undefined){
-    //     apellido = "xxx";
-    // }
-    //apellido = apellido || "xxx";
-   console.log(nombre +  " " + apellido);
+function obtenerAleatorio() {
+    return Math.random();
 }
 
-imprimir("Juan", "Padilla");*/
-
-/*
-function imprimir(persona) {
-    console.log(persona);
-    console.log(persona.nombre + " " + persona.apellido)
-    persona.nombre = "Maria"
+function obtenerNombre() {
+    return "Juan"
 }
 
-var persona = {
-    nombre:"Juan",
-    apellido: "Padilla"
+function esMayor05(p) {
+    if (obtenerAleatorio() > 0.5){
+        return true;
+    }else{
+        return false;
+    }
 }
-imprimir(persona);
 
+console.log(obtenerAleatorio() + 10); // se puede tratar como número por que retorna un entero
+
+
+console.log(obtenerNombre() + " Padilla");
+
+console.log(esMayor05());
+
+if(esMayor05()){
+    console.log("es mayor a 0.5");
+}else{
+    console.log("es menor a 0.5");
+}
+
+
+function crearPersona(nombre, apellido){
+    return {
+       nombre: nombre,
+       apellido: apellido,     
+    }
+}
+
+var persona = crearPersona("Maria", "Paz")
 console.log(persona);
-*/
+console.log(persona.nombre + " " + persona.apellido)
 
 
-// fn es una convención que indica que estamos mandando una función (se usa mucho en jquery)
-function imprimir(fn) {
-    fn();
+
+function creaFuncion() {
+    return function(nombre){
+        console.log("Me creo" + " " + nombre);
+        return function(){
+            console.log("segunda función");
+        }
+    }
 }
 
-var persona = {
-    nombre: "Juan",
-    apellido: "Padilla"
-}
 
-// funcion anónima
-imprimir(function () {
-    console.log("Funcion anonima");
-})
+var nuevaFuncion = creaFuncion();
 
-//función explicita
+nuevaFuncion(persona.nombre);
 
-var miFuncion= function () {
-    console.log("funcion explicita")
-}
+var segundaFuncion = nuevaFuncion(persona.nombre);
 
-imprimir(miFuncion);
+segundaFuncion();
