@@ -23,3 +23,6 @@
 --> una buena práctica es poner todas las funciones al principio del archivo
 
 --> Las funciones así como los objetos y los tipos primitivos pueden ser anónimas
+
+--> En javascript cada que se ejecuta crea un contexto llamado windows y javascript crea otro llamado this, que en un principio en el objeto global apunta a window
+--> el this toma el contexto padre, es decir si es una funcion, o un objeto ese será el contexto del this
