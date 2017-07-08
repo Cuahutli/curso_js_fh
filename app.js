@@ -1,7 +1,11 @@
-var a = 1;
-var b = "Fernando";
+function imprimir() {
+    for (var i=0; i < 8000; i++){
+        console.log("imprimio");
+    }
+}
 
-console.log(b);
-console.warn(b);
-console.error(b);
-console.info(b);
+function presionoClick(params) {
+    console.log("Click en botón")
+}
+
+imprimir();
