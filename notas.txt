@@ -7,3 +7,12 @@
 --> JavaScript primero barre todo el archivo y crea las variables como undefined, (undefined lo usa para las variables primitivas, es decir aquellas que no son un objeto)
 
 --> JavaScript no es asincrono
+
+--> tipos de datos:
+        --> Primitivos
+            --> string
+            --> boolean
+            --> undefined
+            --> numeric
+            --> null
+        --> Objectos
