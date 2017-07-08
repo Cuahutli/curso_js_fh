@@ -1,28 +1,26 @@
-var num = 10;
-var str = "texto";
-var bol = true;
-var und = undefined;
-var nul = null;
+var a = 10;
+var b = a; /* paso por valor las variables primitivas siempre se pasan por valor */
 
-console.log(num);
+console.log(a);
+console.log(b);
 
-num = str;
-console.log(num);
+a = 20;
 
-console.log(bol)
-bol = 10;
-console.log(bol)
+console.log(a);
+console.log(b);
 
-var obj = {}; /* objeto vacío */
 
-/* declaración de un objeto, lo que lleva dentro son propiedades */
-var obj = {
-    numero: 10,
-    texto: "Nuevo Texto",
-    objHijo: {
-        nombre: "Cuahutli",
-        edad: 37,
-    }
+/* cuando son objetos se pasan por referencia, por eso cambiando uno, se modifica en todos*/
+var c = {
+    nombre :"Juana"
 };
 
-console.log(obj)
+var d = c;
+
+console.log(c);
+console.log(d);
+
+c.nombre = "Maria"
+
+console.log(c);
+console.log(d);
