@@ -16,3 +16,7 @@
             --> numeric
             --> null
         --> Objectos
+
+
+--> En javascript las funciones y los procedimientos es lo mismo, sólo existe la función
+--> Todas las funciones regresan un valor, si no hacer return el return es undefined

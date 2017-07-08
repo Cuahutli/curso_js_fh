@@ -1,53 +1,19 @@
-var persona = {
-    nombre: "Juana",
-    apellido: "Herrera",
-    edad: 25,
-    direccion: {
-        calle: "Juárez",
-        numero: 200,
-        estado: "Nayarit",
-        edificio:{
-            nombre: "Edificio principal",
-            telefono: "3111115 22"
-        }
-    }
-};
+var a = 30  
+function primeraFuncion() {
+  var a= 20;
+  console.log(a);
+}
 
-console.log(persona.nombre);
-console.log(persona.edad);
-console.log(persona.direccion);
-console.log(persona.direccion.estado);
+console.log(a);
 
+primeraFuncion();
 
-/* lo crea al vuelo  y lo modifica sin problemas */ 
-persona.direccion.municipio = "Tepic";
+console.log(a);
 
-console.log(persona.direccion)
+//undefined
+console.log(primeraFuncion());
 
+var x = primeraFuncion(); // si no le pongo los parentesis, no estoy invocando a la función, lo que retorna es la función misma
 
-console.log(persona.direccion.edificio.telefono)
-
-var edificio_persona = persona.direccion.edificio
-
-console.log(edificio_persona.telefono)
-
-edificio_persona.nombre_gerente = "Martin Caballero"
-edificio_persona.nopiso = "8vo piso"
-
-console.log(edificio_persona)
-
-persona.direccion.edificio.encargado = "Patricia"
-persona.direccion.edificio.noperi = "9no piso"
-
-console.log(edificio_persona)
-
-
-
-
-
-/* notación corchete es bueno para cuando tenemos datos dinámicos */
-
-var campo = "edad";
-console.log(persona["nombre"]);
-console.log(persona["direccion"]["calle"]);
-console.log(persona[campo])
+//undefined
+console.log(x)
