@@ -1,0 +1,5 @@
+--> el objeto global es window y todo cuelga de él en javascript
+
+--> En node el objeto principal no es window
+
+--> intentar nunca usar variables globales
